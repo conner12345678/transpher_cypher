@@ -1,0 +1,19 @@
+.game-holder .grid-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30vw;
+  height: 30vw;
+  text-align: center;
+}
+.game-holder .grid-content .cell {
+  border-style: double;
+  border-color: white;
+  background-color: #00B4DD;
+  transition: background-color 0.5s ease-in-out;
+}
+.game-holder .grid-content .cell:hover {
+  background-color: #006177;
+}
+.game-holder .grid-content .text {
+  height: 0px;
+}/*# sourceMappingURL=GameComponent.css.map */

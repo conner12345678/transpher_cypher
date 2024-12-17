@@ -1,0 +1,21 @@
+.game-holder{
+    .grid-content{
+        display: flex;
+        flex-wrap: wrap;
+        width: 30vw;
+        height: 30vw;
+        text-align: center;
+        .cell{
+            border-style: double;
+            border-color: white;
+            background-color: #00B4DD;
+            transition: background-color 0.5s ease-in-out;
+            &:hover{
+                background-color: #006177;
+            }
+        }
+        .text{
+            height: 0px;
+        }
+    }
+}
