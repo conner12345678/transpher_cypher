@@ -1,4 +1,6 @@
 .game-holder{
+    display: flex;
+    flex-wrap: wrap;
     .grid-content{
         display: flex;
         flex-wrap: wrap;

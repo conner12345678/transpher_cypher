@@ -1,4 +1,4 @@
-import React from 'react'
+import { browser} from 'react'
 
 const Menu = () => {
   return (
