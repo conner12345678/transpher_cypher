@@ -1,7 +1,10 @@
 .game-holder{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
     .grid-content{
+        flex: 69%;
         display: flex;
         flex-wrap: wrap;
         width: 30vw;
@@ -19,5 +22,18 @@
         .text{
             height: 0px;
         }
+    }
+    .info{
+        margin-top: 5vw;
+        flex: 29%;
+        .score{
+            margin-top: 10vw;
+        }
+    }
+    .timer{
+        flex: 100%;
+    }
+    .answer-area{
+        flex: 100%;
     }
 }

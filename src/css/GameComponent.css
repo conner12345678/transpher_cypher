@@ -1,4 +1,11 @@
+.game-holder {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+}
 .game-holder .grid-content {
+  flex: 69%;
   display: flex;
   flex-wrap: wrap;
   width: 30vw;
@@ -16,4 +23,17 @@
 }
 .game-holder .grid-content .text {
   height: 0px;
+}
+.game-holder .info {
+  margin-top: 5vw;
+  flex: 29%;
+}
+.game-holder .info .score {
+  margin-top: 10vw;
+}
+.game-holder .timer {
+  flex: 100%;
+}
+.game-holder .answer-area {
+  flex: 100%;
 }/*# sourceMappingURL=GameComponent.css.map */
