@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
 const keySchema = new mongoose.Schema({
-    key: {
+    theKey: {
         type: Number
     }
-})
+}, {collection: 'Keys'})
 
 module.exports = mongoose.model("Key", keySchema)

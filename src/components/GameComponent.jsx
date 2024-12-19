@@ -5,12 +5,6 @@ const GameComponent = ({ coll }) => {
     const row = ['', '', '']
     const [minuts, setMinuts] = useState(3)
     const [seconds, setSeconds] = useState(0)
-    const handleKey = async()=>{
-        let key = await fetch('https://localhost:5000/users', {
-            method: 'GET',
-            headers: {'Content-Type': 'application/json'},
-        })
-    }
     useEffect(() => {
         const timer = setInterval(() => {
             if(seconds > 0){
@@ -41,7 +35,7 @@ const GameComponent = ({ coll }) => {
             ))}
         </div>
         <div className='info'>
-            <div className='key'>Key: {handleKey()}</div>
+            <div className='key'>Key: </div>
             <div className='cipher-text'>ciphered text: </div>
             <div className='score'>
             <div className='points'>Score</div>
