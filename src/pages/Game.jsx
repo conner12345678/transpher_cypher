@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import GameComponent from "../components/GameComponent"
 
 const Game = () => {
-    const coll = [['', '', '']]
     const [data, setData] = useState(null)
     useEffect(() => {
       const fetchData = async () => {
@@ -16,7 +15,7 @@ const Game = () => {
       }
 
       fetchData()
-  })
+  }, [])
   return (
     <GameComponent coll={data ? data[0].coll : ['', '', '']} word={data ? data[0].word : 'loading'} cipherWord={data ? data[0].cipherWord : 'loading'} theKey={data ? data[0].theKey : 'loading'}/>
   )

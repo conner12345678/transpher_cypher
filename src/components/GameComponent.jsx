@@ -5,6 +5,7 @@ const GameComponent = ({ coll, word, cipherWord, theKey }) => {
     const row = ['', '', '']
     const [minuts, setMinuts] = useState(3)
     const [seconds, setSeconds] = useState(0)
+    const [answer, setAnswer] = useState('')
     useEffect(() => {
         const timer = setInterval(() => {
             if(seconds > 0){
@@ -19,7 +20,15 @@ const GameComponent = ({ coll, word, cipherWord, theKey }) => {
             }
         }, 1000)
         return () => clearInterval(timer)
-    }, [])
+    })
+    const correct = () => {
+        if(answer.toLowerCase() === word.toLowerCase()){
+            alert('Correct!')
+        } else {
+            alert('Incorrect!')
+        }
+        setAnswer('')
+    }
   return (
     <div className="game-holder">
         {seconds < 10 ? <h1 className='timer'>{minuts+':0'+seconds}</h1> : <h1 className='timer'>{minuts+':'+seconds}</h1>}
@@ -41,8 +50,8 @@ const GameComponent = ({ coll, word, cipherWord, theKey }) => {
         </div>
         </div>
         <div className='answer-area'>
-            <input type="text" placeholder='Answer here:'/>
-            <button>Submit</button>
+            <input type="text" placeholder='Answer here:' className='answer' value={answer} onChange={(e)=>setAnswer(e.target.value)}/>
+            <button onClick={()=>correct()}>Submit</button>
         </div>
     </div>
   )
