@@ -17,9 +17,8 @@ const Game = () => {
 
       fetchData()
   })
-  console.log(data[0].theKey)
   return (
-    <GameComponent coll={coll[0]}/>
+    <GameComponent coll={data ? data[0].coll : ['', '', '']} word={data ? data[0].word : 'loading'} cipherWord={data ? data[0].cipherWord : 'loading'} theKey={data ? data[0].theKey : 'loading'}/>
   )
 }
 

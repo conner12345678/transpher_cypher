@@ -1,7 +1,7 @@
 import '../css/GameComponent.css'
 import { useState, useEffect } from 'react'
 
-const GameComponent = ({ coll }) => {
+const GameComponent = ({ coll, word, cipherWord, theKey }) => {
     const row = ['', '', '']
     const [minuts, setMinuts] = useState(3)
     const [seconds, setSeconds] = useState(0)
@@ -19,8 +19,7 @@ const GameComponent = ({ coll }) => {
             }
         }, 1000)
         return () => clearInterval(timer)
-    })
-
+    }, [])
   return (
     <div className="game-holder">
         {seconds < 10 ? <h1 className='timer'>{minuts+':0'+seconds}</h1> : <h1 className='timer'>{minuts+':'+seconds}</h1>}
@@ -35,8 +34,8 @@ const GameComponent = ({ coll }) => {
             ))}
         </div>
         <div className='info'>
-            <div className='key'>Key: </div>
-            <div className='cipher-text'>ciphered text: </div>
+            <div className='key'>Key: {theKey}</div>
+            <div className='cipher-text'>ciphered text: {cipherWord}</div>
             <div className='score'>
             <div className='points'>Score</div>
         </div>
